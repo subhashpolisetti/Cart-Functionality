@@ -26,3 +26,7 @@ body {
 .action-icons:hover{
   cursor: pointer;
 }
+.cartitems{
+  display: flex;
+  flex-direction: column;
+}
