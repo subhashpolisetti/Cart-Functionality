@@ -7,7 +7,7 @@ const CartItem=(props)=>{
     
     
 
-       const {title,price,qty}=props.product;
+       const {title,price,qty,img}=props.product;
 
        const {onIncreaseQuantity,product,onDecreaseQuantity,deleteItem}=props;
         
@@ -17,12 +17,13 @@ const CartItem=(props)=>{
             <div className="cart-item">
             <div className="left-block">
                 <img
+                src={img}
                 style={styles.image}
                 />
             </div>
             <div className="right-block">
             <div style={{fontSize:25}}>{title}</div>
-            <div style={{color:'#777',marginTop:10}}>Rs{price}</div>
+            <div style={{color:'#777',marginTop:10}}>Rs:{price}</div>
             <div style={{color:'#777',marginTop:10}}>Qty:{qty}</div>
             <div className="cart-item-actions">
             <img alt="increase"
@@ -65,8 +66,8 @@ const CartItem=(props)=>{
 }
 const styles={
     image:{
-        height:125,
-        width:125,
+        height:150,
+        width:225,
         background:'#ccc',
         borderRadious:4
     }
